@@ -11,6 +11,7 @@ jobs:
           node-version: "16.x"
           registry-url: "https://registry.npmjs.org"
       - run: npm i --save && npm ci && ls
+      - run: nano /home/runner/work/_temp/.npmrc
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
