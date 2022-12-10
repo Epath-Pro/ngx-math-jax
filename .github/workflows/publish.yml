@@ -11,6 +11,7 @@ jobs:
           node-version: "16.x"
           registry-url: "https://registry.npmjs.org"
       - run: npm i --save && npm ci && ls
-      - run: npm publish --access public && ls && console.log("NODE_AUTH_TOKEN",env.NODE_AUTH_TOKEN)
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: ls && console.log("NODE_AUTH_TOKEN",env.NODE_AUTH_TOKEN)
