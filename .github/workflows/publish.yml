@@ -12,5 +12,4 @@ jobs:
       - run: npm install --save
       - run: npm publish --access public
       - uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
+
